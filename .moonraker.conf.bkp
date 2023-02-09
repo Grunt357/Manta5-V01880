@@ -20,12 +20,12 @@ cors_domains =
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
 
-[octoprint_compat]
+[file_manager]
+enable_object_processing = True
 
 [history]
 
 [update_manager]
-channel = dev
 refresh_interval = 168
 
 [update_manager mainsail]
@@ -33,4 +33,24 @@ type = web
 channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
+
+[update_manager CanBoot]
+type = git_repo
+path = ~/CanBoot
+origin = https://github.com/Arksine/CanBoot.git
+is_system_service = False
+
+[update_manager sonar]
+type = git_repo
+path = ~/sonar
+origin = https://github.com/mainsail-crew/sonar.git
+primary_branch = main
+managed_services = sonar
+install_script = tools/install.sh
+
+[update_manager led_effect]
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
 
