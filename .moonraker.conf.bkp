@@ -36,12 +36,6 @@ channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
-[update_manager CanBoot]
-type = git_repo
-path = ~/CanBoot
-origin = https://github.com/Arksine/CanBoot.git
-is_system_service = False
-
 [update_manager sonar]
 type = git_repo
 path = ~/sonar
